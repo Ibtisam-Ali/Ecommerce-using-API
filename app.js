@@ -1,6 +1,8 @@
 const div = document.querySelector('.div')
 
 
+let arr = []
+
 
 
 axios('https://fakestoreapi.com/products')
@@ -79,7 +81,7 @@ function AllItems() {
       <div class="card-body">
         <p class="card-title">Title: ${item.title}</p>
        <p>Category: ${item.category}</p> <p>Id: ${item.id}</p> <p>Price: ${item.price}</p>
-        <a href="#" class="btn btn-primary">Add to cart</a>
+        <a href="#" class="btn btn-primary" onclick="addToCart()">Add to cart</a>
       </div>
     </div>`
 
@@ -89,9 +91,20 @@ function AllItems() {
     })
 
     .catch((err)=>{
+      
       console.log(err);
 
 })
   
-}
+};
+
+
+
+
+
+
+
+
+
+
 
